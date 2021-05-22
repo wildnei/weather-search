@@ -1,43 +1,115 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="en">
 
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
-  <header class="container-fluid text-center text-white bg-dark p-2">
-    <h1>Weather Dashboard</h1>
-  </header>
+  <!-- Overarching Container -->
+  <!-- "JumboTron" -->
 
-  <div class="container-fluid">
-    <div class="row">
-      <aside class="col-lg-3 bg-light">
-        <h5 class="mt-1">Search for a City:</h5>
-        <div class="form-inline form-group">
-          <input class="form-control" type="text" id="search-value" />
-          <button class="btn btn-primary" id="search-button"> <i class="fa fa-search"></i> </button>
+  <div class="grid-container fluid">
+    <div class="grid-x grid-padding-x header">
+      <div class="small-12 cell">
+        <h1><strong>Weather Dashboard</strong></h1>
+      </div>
+    </div>
+
+    <!-- Search Menu -->
+    <div class="grid-x grid-padding-x grid-padding-y search">
+      <div class="small 12 cell top-div">
+        <label>
+          <h5>Search for a City:</h5>
+        </label>
+      </div>
+    </div>
+    <div class="grid-x grid-padding-x grid-padding-y">
+      <div class="small-12 cell">
+        <div class="grid-x grid-padding-x top-div">
+          <div class="small-12 cell" id="putCityHere">
+            <textarea placeholder="Paradise" id="textArea"></textarea>
+            <button a href="#" class="button" id="search">Search</button>
+          </div>
         </div>
+      </div>
+    </div>
+    <!-- Current Day Tab -->
+    <div class="grid-x grid-padding-x">
+      <div class="small-12 cell">
+        <div class="primary callout hide second" id="currDayDiv">
+          <!-- Going to have to make these with identifiable ID's -->
+          <div class="grid-x grid-padding-x">
+            <h2 class="small-12 medium-4 cell" id="currentCity"></h2>
+            <h5 class="small-12 medium-4 cell" id="currentDay"></h5>
+            <img src="" class="small-6 medium-4 cell" id="currWeatherIcon"></img>
+          </div>
+          <div class="grid-x grid-padding-x">
+            <p class="small-12  cell box" id="currentTemp"></p>
+            <p class="small-12  cell box" id='currentHumidity'></p>
+            <p class="small-12  cell box" id="currentWind"></p>
+            <p class="small-6 medium-2 cell box" id="currentUV"></p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-        <ul class="list-group history"></ul>
-      </aside>
+    <!-- 5-Day Forcast -->
+    <div class="grid-x grid-padding-x hide" id="fiveDayDiv">
+      <div class="small-12 cell">
+        <div class="grid-x">
+          <h4>5-Day Forecast</h4>
+        </div>
+        <div class="grid-x grid-padding-x border">
+          <div class="small-6 medium-2 cell">
+            <p id="date1Cal"> DD/M </p>
+            <img id="date1Icon"></img>
+            <p id="date1Temp">Temp</p>
+            <p id="date1Hum">Humidity</p>
+          </div>
+          <div class="small-6 medium-2 cell">
+            <p id="date2Cal"> DD/M </p>
+            <img id="date2Icon"></img>
+            <p id="date2Temp">Temp</p>
+            <p id="date2Hum">Humidity</p>
+          </div>
+          <div class="small-6 medium-2 cell">
+            <p id="date3Cal"> DD/M </p>
+            <img id="date3Icon"></img>
+            <p id="date3Temp">Temp</p>
+            <p id="date3Hum">Humidity</p>
+          </div>
+          <div class="small-6 medium-2 cell">
+            <p id="date4Cal"> DD/M </p>
+            <img id="date4Icon"></img>
+            <p id="date4Temp">Temp</p>
+            <p id="date4Hum">Humidity</p>
+          </div>
+          <div class="small-6 medium-2 cell">
+            <p id="date5Cal"> DD/M </p>
+            <img id="date5Icon"></img>
+            <p id="date5Temp">Temp</p>
+            <p id="date5Hum">Humidity</p>
+          </div>
 
-      <div class="col-lg-9">
-        <div id="today" class="mt-3"></div>
-        <div id="forecast" class="mt-3"></div>
+        </div>
       </div>
     </div>
   </div>
-
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="./Assets/script.js"></script>
+  <!-- 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+  <!-- <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script> -->
+  <!-- <script>
+        $(document).foundation();
+    </script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
