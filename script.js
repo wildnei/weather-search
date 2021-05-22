@@ -103,7 +103,6 @@ $(document).ready(function () {
 
         $('#currDayDiv').removeClass('hide');
         $('#fiveDayDiv').removeClass('hide');
-
       })
     });
   }
@@ -111,11 +110,9 @@ $(document).ready(function () {
   // once search button is clicked, do the following work: 
   $("#search").on("click", function () {
 
-
     // collect what has been written in the text area 
     var cityName = $(this).siblings("#textArea").val();
     runAgain(cityName);
-    // check if we've collected it 
 
     // store the city name in localstorage 
     localStorage.setItem(cityName, cityName);
@@ -126,7 +123,7 @@ $(document).ready(function () {
     citiesSearched.attr('class', 'city'); // gives class of city to new p tag
     citiesSearched.attr('value', cityName);
     citiesSearched.text(cityName); // Writes the name of the searched city in the p tag
-    $('#putCityHere').append(citiesSearched); // put new btn on page to id of areaToAddTo
+    $('#putCityHere').append(citiesSearched);
 
     // when you click on the new buttons 
     $(".city").on("click", function () {
