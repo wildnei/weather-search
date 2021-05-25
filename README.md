@@ -1,3 +1,7 @@
+# Link to deployed application
+
+[Visit Application](https://wildnei.github.io/weather-search/)
+
 # How to use our dashboard
 
  * 💚 Simply search for a city and the dashboard will display current and the following 5 days weather. 
