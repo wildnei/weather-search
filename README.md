@@ -16,7 +16,7 @@
 
 # Preview
 
-![Table](./assets/calendar.gif)
+![Table](https://ik.imagekit.io/devdojo/readme_gif/weather_qWYgZ6jXC.PNG)
 
 
 ## Contact Information
